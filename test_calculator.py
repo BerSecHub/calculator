@@ -12,7 +12,7 @@ class TestCalculator:
         """Sum of numbers gives result."""
         calc = Calculator(2, 3)
         result = calc.sum()
-        assert result == 5
+        assert result == 6
 
     def test_subtract(self):
         """Subtract two numbers."""

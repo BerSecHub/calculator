@@ -1,0 +1,14 @@
+# virtual environment
+.venv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# pytest / coverage working data (the htmlcov/ report stays in the repo)
+.pytest_cache/
+.coverage
+
+# IDE and macOS
+.idea/
+.DS_Store

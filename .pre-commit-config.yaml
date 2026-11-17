@@ -7,3 +7,4 @@ repos:
           - --fail-under=10.0
         additional_dependencies:
           - pytest
+          - pytest-playwright

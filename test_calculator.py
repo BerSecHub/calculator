@@ -12,7 +12,7 @@ class TestCalculator:
         """Sum of numbers gives result."""
         calc = Calculator(2, 3)
         result = calc.sum()
-        assert result == 6
+        assert result == 5
 
     def test_subtract(self):
         """Subtract two numbers."""
@@ -53,3 +53,13 @@ class TestCalculator:
         """Run without errors gives expected output."""
         runpy.run_module("calculator", run_name="__main__")
         assert "10 / 0 = nan" in capsys.readouterr().out
+
+    @pytest.mark.parametrize("a, b, expected", [
+        (2, 3, 5),
+        (-1, -2, -3),
+        (2.5, 3.5, 6.0),
+    ])
+    def test_add_parametrized(self, a, b, expected):
+        """sum() returns the expected result for several operand pairs."""
+        calc = Calculator(a, b)
+        assert calc.sum() == expected
